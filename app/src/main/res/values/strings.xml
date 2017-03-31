@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Your Movies</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="snackbar_action_retry">RETRY</string>
+    <string name="snackbar_action_undo">UNDO</string>
+
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="title_activity_scrolling_my">ScrollingActivityMy</string>
+    <string name="title_activity_desc">DescActivity</string>
+    <string name="title_activity_main_a">MainAActivity</string>
+
+    <string name="menu_refresh">Refresh</string>
+    <string name="menu_most_popular">Most Popular</string>
+    <string name="menu_top_rated">Top Rated</string>
+    <string name="menu_favourites">Favourites</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="err_no_connection">No connection.</string>
+
+    <string name="info_added_to_favourites">Added to favourites</string>
+    <string name="info_removed_from_favourites">Removed from favourites</string>
+
+
+    <string name="pref_my_preferences_bundle" translatable="false">my_preferences</string>
+    <string name="pref_sort_criteria_key" translatable="false">sort_criteria</string>
+
+    <string name="max_rating" translatable="false">/10</string>
+
+    <string name="btn_label_trailer">Trailer</string>
+
+</resources>
