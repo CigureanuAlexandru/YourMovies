@@ -11,7 +11,7 @@ import java.lang.annotation.RetentionPolicy;
 
 
 public class Config {
-    public static final String MOVIES_DB_API_KEY = "YOUR_KEY";
+
     // Declare the sort constants
     public static final int SORT_BY_POPULARITY = 0;
     public static final int SORT_BY_TOP_RATED = 1;

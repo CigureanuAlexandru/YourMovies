@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private static final String TAG = MainActivity.class.getSimpleName();
     private static final String SORT_CRITERIA_KEY = "sort_criteria";
-    public static final String MOVIE_KEY = "movie";
 
     private NavigationView navigationView;
 
@@ -85,6 +84,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onSaveInstanceState(Bundle outState) {
         outState.putInt(SORT_CRITERIA_KEY, sortCriteria);
         super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (TheApplication.getInstance().getSortCriteria() == Config.SORT_BY_FAVOURITES) {
+            ((IMovies) getSupportFragmentManager().findFragmentById(R.id.fragment_container)).onMoviesRefresh();
+        }
     }
 
     @Override
@@ -168,6 +175,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         mi = getMenuItemById(R.id.menu_favourites);
         mi.setChecked(mi.getItemId() == id);
     }
+
+
 
     private void setupMenuOptionSelected(Menu menu, int id) {
         MenuItem mi = menu.findItem(R.id.menu_top_rated);

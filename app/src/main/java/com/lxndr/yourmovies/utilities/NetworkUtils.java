@@ -18,6 +18,7 @@ package com.lxndr.yourmovies.utilities;
 import android.net.Uri;
 import android.util.Log;
 
+import com.lxndr.yourmovies.BuildConfig;
 import com.lxndr.yourmovies.Config;
 
 import java.io.IOException;
@@ -66,7 +67,7 @@ public final class NetworkUtils {
 
     public static URL buildUrl(String baseURL, final int page) {
         Uri builtUri = Uri.parse(baseURL).buildUpon()
-                .appendQueryParameter(KEY_PARAM, Config.MOVIES_DB_API_KEY)
+                .appendQueryParameter(KEY_PARAM, BuildConfig.MOVIES_DB_API_KEY)
                 .appendQueryParameter(PAGE_PARAM, Integer.toString(page))
                 .build();
 
@@ -84,7 +85,7 @@ public final class NetworkUtils {
 
     public static URL buildUrl(String baseURL) {
         Uri builtUri = Uri.parse(baseURL).buildUpon()
-                .appendQueryParameter(KEY_PARAM, Config.MOVIES_DB_API_KEY)
+                .appendQueryParameter(KEY_PARAM, BuildConfig.MOVIES_DB_API_KEY)
                 .build();
 
         URL url = null;

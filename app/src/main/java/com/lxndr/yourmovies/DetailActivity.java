@@ -343,7 +343,8 @@ public class DetailActivity extends AppCompatActivity {
             b.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:"+t.getKey()));
+                    Intent intent = new Intent(Intent.ACTION_VIEW,
+                            Uri.parse("https://www.youtube.com/watch?v=" + t.getKey()));
                     intent.putExtra("VIDEO_ID", t.getKey());
                     startActivity(intent);
                 }
